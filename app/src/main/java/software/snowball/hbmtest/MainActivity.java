@@ -1,5 +1,7 @@
 package software.snowball.hbmtest;
 
+import android.app.Activity;
+import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tIR;
     TextView tRED;
 
+    Activity mContext;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,14 @@ public class MainActivity extends AppCompatActivity {
 
         tIR = (TextView) findViewById(R.id.tvIR);
         tRED = (TextView) findViewById(R.id.tvRED);
+
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        mContext = this;
+
+        mSSListenerIR = new SSListenerIR();
+        mSSListenerRED = new SSListenerRED();
+
+
     }
 
     private class SSListenerIR implements SsensorEventListener {
