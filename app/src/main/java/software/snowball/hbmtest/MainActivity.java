@@ -3,7 +3,11 @@ package software.snowball.hbmtest;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.samsung.android.sdk.SsdkInterface;
+
 public class MainActivity extends AppCompatActivity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

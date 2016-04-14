@@ -8,6 +8,10 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
+
+        <uses-permission android:name="com.samsung.permission.SSENSOR_HRM_RAW_PPG"/>
+        <uses-permission android:name=
+            "com.samsung.android.providers.context.permission.WRITE_USE_APP_FEATURE_SURVEY"/>
         <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
